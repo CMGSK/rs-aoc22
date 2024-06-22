@@ -1,6 +1,7 @@
 use std::fs::read_to_string;
 pub mod day01;
 pub mod day02;
+pub mod day03;
 
 #[derive(Debug)]
 pub struct Day {

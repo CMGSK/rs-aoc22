@@ -30,7 +30,7 @@ pub fn part2(day: &mut Day){
             ))
         })
         .collect();
-    let result: u32 = input.into_iter()
+    day.part2 = input.into_iter()
         .map(|(c, p)| {
             match p {
                2 => {(3 + c) as u32},
@@ -38,8 +38,8 @@ pub fn part2(day: &mut Day){
                _ => {(1 + (c!=2) as u8 + (c==1) as u8) as u32}
             }
         })
-        .sum();
-    day.part2 = result.to_string();
+        .sum::<u32>()
+        .to_string();
 }
 
 #[cfg(test)]
